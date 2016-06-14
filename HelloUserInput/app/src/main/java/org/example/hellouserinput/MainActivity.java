@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         Salut = (TextView)findViewById(R.id.Hello);
         Name = (EditText)findViewById(R.id.Name);
-        Salut.setText("Hello " + Name.getText() + "!");
+        Salut.setText(getString(R.string.Hello) + " " + Name.getText());
     }
 
 

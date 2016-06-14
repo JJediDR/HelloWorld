@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Hello User Input!</string>
+    <string name="ButtonName">Enter</string>
+    <string name="Hello">Hello</string>
+    <string name="HelloWorld">Hello World</string>
 </resources>
