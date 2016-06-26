@@ -10,31 +10,58 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="org.example.hellouserinput.MainActivity">
 
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        tools:context=".MainActivity"
+        android:id="@+id/NameList"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/Hello"
+        android:layout_alignRight="@+id/Name"
+        android:layout_alignEnd="@+id/Name"
+
+        />
+
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/HelloWorld"
-        android:id="@+id/Hello" />
+        android:id="@+id/Hello"
+        android:layout_above="@+id/Name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="81dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Name"
-        android:layout_below="@+id/Hello"
+        android:hint="Enter Name"
+        android:layout_gravity="bottom"
+        android:layout_above="@+id/OKHello"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="94dp"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Enter Name" />
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ButtonName"
         android:id="@+id/OKHello"
-        android:layout_below="@+id/Name"
-        android:layout_centerHorizontal="true"
         android:hint="Enter"
-        android:onClick="Button" />
+        android:onClick="Button"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>
+
