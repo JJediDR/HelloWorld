@@ -1,14 +1,10 @@
 package org.example.hellouserinput;
 
-import android.content.Context;
-import android.graphics.drawable.GradientDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -25,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RecyclerView Names = (RecyclerView)findViewById(R.id.NameList);
+        RecyclerView names = (RecyclerView)findViewById(R.id.NameList);
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        LinearLayoutManager linearLM = new LinearLayoutManager(this);
 
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        llm.canScrollVertically();
+        linearLM.setOrientation(LinearLayoutManager.VERTICAL);
+        linearLM.canScrollVertically();
 
-        Names.setLayoutManager(llm);
+        names.setLayoutManager(linearLM);
     }
 
     public abstract static class NamesAdapter extends
@@ -43,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         public static class ViewHolder extends RecyclerView.ViewHolder {
             // Your holder should contain a member variable
             // for any view that will be set as you render a row
-            public TextView NameTextView;
+            public TextView nameTextView;
 
 
             // We also create a constructor that accepts the entire item row
@@ -53,15 +49,15 @@ public class MainActivity extends AppCompatActivity {
                 // to access the context from any ViewHolder instance.
                 super(itemView);
 
-                NameTextView = (TextView)itemView.findViewById(R.id.NameView);
+                nameTextView = (TextView)itemView.findViewById(R.id.NameView);
             }
         }
     }
 
-    public abstract class NameAdapter extends RecyclerView.Adapter<NamesAdapter.ViewHolder> {
+    public abstract class nameAdapter extends RecyclerView.Adapter<NamesAdapter.ViewHolder> {
 
-        public NameAdapter(List<Attributes.Name> Names) {
-            Names = NameArray;
+        public nameAdapter(List<Attributes.Name> names) {
+            names = nameArray;
 
 
         }
@@ -72,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        private TextView Salut;
-    private EditText Name;
-    public ArrayList NameArray = new ArrayList(1);
+        private TextView salut;
+    private EditText name;
+    public ArrayList nameArray = new ArrayList(1);
 
 
 
@@ -85,12 +81,12 @@ public class MainActivity extends AppCompatActivity {
         Button EnterButton = (Button) v;
 
 
-        NameArray.add(Name);
-        Salut = (TextView)findViewById(R.id.Hello);
-        Name = (EditText)findViewById(R.id.Name);
-        Salut.setText(getString(R.string.Hello) + " " + Name.getText());
+        nameArray.add(name);
+        salut = (TextView)findViewById(R.id.hello);
+        name = (EditText)findViewById(R.id.nameInputBox);
+        salut.setText(getString(R.string.Hello) + " " + name.getText());
 
-        return NameArray;
+        return nameArray;
     }
 
 

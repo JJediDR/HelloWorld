@@ -15,14 +15,14 @@
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         tools:context=".MainActivity"
-        android:id="@+id/NameList"
+        android:id="@+id/nameList"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/Hello"
-        android:layout_alignRight="@+id/Name"
-        android:layout_alignEnd="@+id/Name"
+        android:layout_above="@+id/hello"
+        android:layout_alignRight="@+id/nameInputBox"
+        android:layout_alignEnd="@+id/nameInputBox"
 
         />
 
@@ -33,8 +33,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/HelloWorld"
-        android:id="@+id/Hello"
-        android:layout_above="@+id/Name"
+        android:id="@+id/hello"
+        android:layout_above="@+id/nameInputBox"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="81dp" />
@@ -42,10 +42,10 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Name"
+        android:id="@+id/nameInputBox"
         android:hint="Enter Name"
         android:layout_gravity="bottom"
-        android:layout_above="@+id/OKHello"
+        android:layout_above="@+id/okayHello"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ButtonName"
-        android:id="@+id/OKHello"
+        android:id="@+id/okayHello"
         android:hint="Enter"
         android:onClick="Button"
         android:layout_gravity="bottom"
